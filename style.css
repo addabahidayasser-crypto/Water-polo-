@@ -76,3 +76,54 @@ p, li {
   background: rgba(0, 200, 255, 0.5);
   border-radius: 10px;
 }
+/* ========================= */
+/* CARD STYLE (INFO BOXES) */
+/* ========================= */
+.card {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 20px rgba(0,200,255,0.2);
+
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* ========================= */
+/* IMAGES */
+/* ========================= */
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  margin: 15px 0;
+
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* ========================= */
+/* GRID CHEAT SHEET */
+/* ========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.grid div {
+  background: rgba(0, 200, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+
+  border: 1px solid rgba(0,200,255,0.3);
+  box-shadow: 0 0 10px rgba(0,200,255,0.2);
+                         }
