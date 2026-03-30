@@ -3,253 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Water Polo Rules & Effects</title>
-<style>
-/* ========================= */
-/* Water Polo Blurry Background */
-/* ========================= */
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  overflow-x: hidden;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0a1f44; /* deep pool blue */
-  position: relative;
-  color: white;
-}
-
-/* Water blobs */
-.blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.6;
-  mix-blend-mode: screen;
-  animation: float infinite alternate;
-}
-
-.blob1 { width: 400px; height: 400px; background: radial-gradient(circle at 30% 30%, #00cfff, #004b7f); top: -150px; left: -150px; animation-duration: 12s; }
-.blob2 { width: 500px; height: 500px; background: radial-gradient(circle at 70% 70%, #ffd500, #ff7f00); top: 250px; left: 100px; animation-duration: 15s; }
-.blob3 { width: 350px; height: 350px; background: radial-gradient(circle at 50% 50%, #00ffa3, #00664d); top: 400px; left: -50px; animation-duration: 10s; }
-.blob4 { width: 450px; height: 450px; background: radial-gradient(circle at 40% 60%, #0077ff, #00ffff); top: 100px; left: 300px; animation-duration: 18s; }
-.blob5 { width: 300px; height: 300px; background: radial-gradient(circle at 50% 50%, #ffec7f, #ffaa00); top: 500px; left: 400px; animation-duration: 14s; }
-
-/* Floating animation */
-@keyframes float {
-  0% { transform: translateY(0) translateX(0) rotate(0deg); }
-  25% { transform: translateY(-40px) translateX(30px) rotate(15deg); }
-  50% { transform: translateY(-20px) translateX(-30px) rotate(-10deg); }
-  75% { transform: translateY(30px) translateX(20px) rotate(5deg); }
-  100% { transform: translateY(0) translateX(0) rotate(0deg); }
-}
-
-/* Water wave overlay */
-.wave {
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: repeating-radial-gradient(circle at center, rgba(255,255,255,0.02) 0 10px, transparent 10px 20px);
-  animation: waveMove 20s linear infinite;
-  top: -50%;
-  left: -50%;
-  pointer-events: none;
-}
-
-@keyframes waveMove {
-  0% { transform: translateX(0) translateY(0) rotate(0deg); }
-  100% { transform: translateX(50px) translateY(30px) rotate(360deg); }
-}
-
-/* Scrollable content container */
-.content {
-  position: relative;
-  z-index: 10;
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 30px;
-  background: rgba(0,0,0,0.6);
-  border-radius: 20px;
-  overflow-y: auto;
-  max-height: 80vh;
-  box-shadow: 0 0 30px rgba(255,255,255,0.2);
-}
-
-/* Headings */
-h1 {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-  color: #ffd500;
-}
-
-h2 {
-  margin-top: 20px;
-  color: #00cfff;
-}
-
-ul {
-  margin-left: 20px;
-  line-height: 1.6;
-}
-
-strong {
-  color: #ffec7f;
-}
-</style>
+<title>Water Polo Infographic</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Blurry colored blobs -->
+<!-- Background -->
 <div class="blob blob1"></div>
 <div class="blob blob2"></div>
 <div class="blob blob3"></div>
 <div class="blob blob4"></div>
-<div class="blob blob5"></div>
-
-<!-- Water wave overlay -->
 <div class="wave"></div>
 
-<!-- Scrollable rules content -->
+<!-- Content -->
 <div class="content">
-  <h1>Water Polo Rules</h1>
 
-  <h2>1. Teams and Players</h2>
-  <ul>
-    <li>Each team has <strong>7 players</strong> in the water (6 field + 1 goalkeeper).</li>
-    <li>Teams may have up to <strong>6 substitutes</strong>.</li>
-    <li>Players wear colored caps: white (home), blue (away), red (goalkeeper).</li>
-    <li>Substitutions can be made anytime at the designated area.</li>
-  </ul>
+<h1>🏊 Water Polo Rules – Full Guide</h1>
 
-  <h2>2. The Pool</h2>
-  <ul>
-    <li>Men: 30m × 20m, Women: 25m × 20m, minimum depth: 1.8m.</li>
-    <li>Goals: 3m wide × 0.9m high.</li>
-    <li>Game ends when the ball crosses the goal line.</li>
-  </ul>
+<section class="card">
 
-  <h2>3. Game Duration</h2>
-  <ul>
-    <li>4 quarters of <strong>8 minutes</strong> each (stop-clock).</li>
-    <li>Breaks: 2 minutes between quarters, 5 minutes at halftime.</li>
-    <li>Overtime and penalties if tied in knockout games.</li>
-  </ul>
+<h3>1. Teams and Players</h3>
+<ul>
+<li>Each team has 7 players in the water: 6 field players + 1 goalkeeper.</li>
+<li>Teams can have up to 6 substitutes.</li>
+<li>Players wear caps: usually white for home, blue for away, red for goalkeepers.</li>
+<li>Substitutions can be made on the fly at the designated area.</li>
+</ul>
 
-  <h2>4. Start of Play</h2>
-  <ul>
-    <li>Begins with a <strong>swim-off</strong> from the center.</li>
-    <li>Players race to the ball at the referee’s whistle.</li>
-  </ul>
+<h3>2. The Pool</h3>
 
-  <h2>5. Ball Handling</h2>
-  <ul>
-    <li>Players may touch the ball with <strong>one hand only</strong> (goalkeepers can use both).</li>
-    <li>The ball can be passed, carried, or shot while swimming.</li>
-  </ul>
-
-  <h2>6. Possession & Movement</h2>
-  <ul>
-    <li>Maximum <strong>30 seconds</strong> possession before taking a shot.</li>
-    <li>Players cannot touch the pool bottom for advantage.</li>
-    <li>Swimming and eggbeater kick allowed.</li>
-  </ul>
-
-  <h2>7. Scoring</h2>
-  <ul>
-    <li>A goal is scored when the ball fully crosses the goal line.</li>
-    <li>Each goal = 1 point.</li>
-    <li>Team with most goals at the end wins.</li>
-  </ul>
-
-  <h2>8. Fouls</h2>
-  <ul>
-    <li><strong>Ordinary fouls:</strong> pushing, holding, two-hand touch. Result: free throw.</li>
-    <li><strong>Exclusion fouls:</strong> brutality or preventing goal illegally. Result: excluded 20 seconds.</li>
-    <li><strong>Penalty fouls:</strong> major fouls within 5 meters preventing a goal. Result: penalty shot.</li>
-  </ul>
-
-  <h2>9. Goalkeeper Rules</h2>
-  <ul>
-    <li>Can touch ball with both hands.</li>
-    <li>Cannot cross the halfway line.</li>
-    <li>Organizes defense and protects goal.</li>
-  </ul>
-
-  <h2>10. Game Restart</h2>
-  <ul>
-    <li>After goal: opposing team restarts at center.</li>
-    <li>Ordinary fouls: free throw to opponent.</li>
-    <li>Exclusion: team plays 6 vs 7 until player returns.</li>
-  </ul>
-
-  <h2>11. Other Key Rules</h2>
-  <ul>
-    <li>Shot clock: 30 seconds per possession.</li>
-    <li>Advantage rule: referee may let play continue if stopping benefits the fouling team.</li>
-    <li>Overtime: 3-minute periods in knockout games.</li>
-    <li>Tie-breaking: penalty shootouts if tied after overtime.</li>
-  </ul>
-
-  <h2>12. Equipment</h2>
-  <ul>
-    <li>Ball: yellow, textured for grip.</li>
-    <li>Caps: numbered for identification.</li>
-    <li>Swimsuits: tight-fitting for minimal interference.</li>
-  </ul>
-
-  <p>Water polo is fast-paced, physical, and tactical. Key strategies include center forward offense, press defense, counterattacks, and man-up power plays.</p>
+<div class="image-box">
+<img src="https://images.unsplash.com/photo-1560090995-01632a28895b" alt="Pool">
 </div>
-<h1>🏊 Water Polo Cheat Sheet</h1>
 
-<!-- ========================= -->
-<!-- 2. THE POOL -->
-<!-- ========================= -->
-<section class="card">
-  <h2>2. The Pool</h2>
+<ul>
+<li>Standard size: 30m × 20m (men) or 25m × 20m (women).</li>
+<li>Minimum depth: 1.8m.</li>
+<li>Goals: 3m wide × 0.9m high.</li>
+<li>Game ends when the ball touches the water beyond the goal line or crosses the goal line.</li>
+</ul>
 
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Water_polo_pool.jpg" alt="Water Polo Pool">
+<h3>3. Game Duration</h3>
+<ul>
+<li>4 periods (quarters):</li>
+<li>Each quarter lasts 8 minutes of actual play (stop-clock).</li>
+<li>2-minute breaks between quarters; 5 minutes at halftime.</li>
+<li>Overtime and penalty shootouts may occur if tied in knockout games.</li>
+</ul>
 
-  <ul>
-    <li><strong>Size:</strong> 30m × 20m (men) / 25m × 20m (women)</li>
-    <li><strong>Depth:</strong> Minimum 1.8m</li>
-    <li><strong>Goal:</strong> 3m wide × 0.9m high</li>
-    <li><strong>Rule:</strong> Ball must fully cross the goal line</li>
-  </ul>
+<h3>4. Start of Play</h3>
+<ul>
+<li>Game begins with a swim-off from the center of the pool.</li>
+<li>Players race to the ball at the referee’s whistle.</li>
+</ul>
+
+<h3>5. Ball Handling</h3>
+<ul>
+<li>Players may touch the ball with one hand only.</li>
+<li>Goalkeepers can use both hands.</li>
+<li>The ball can be passed, shot, or carried while swimming.</li>
+</ul>
+
+<h3>6. Possession & Movement</h3>
+<ul>
+<li>Maximum of 30 seconds of possession per team before a shot must be taken.</li>
+<li>Players cannot touch the bottom of the pool to gain advantage.</li>
+<li>Swimming and treading water is allowed (eggbeater kick is commonly used).</li>
+</ul>
+
+<h3>7. Scoring</h3>
+<ul>
+<li>A goal is scored when the entire ball crosses the goal line.</li>
+<li>Each goal counts as 1 point.</li>
+<li>The team with the most goals at the end wins.</li>
+</ul>
+
+<h3>8. Fouls</h3>
+<ul>
+<li>Ordinary Fouls (Free Throws):</li>
+<li>Pushing, holding, or sinking an opponent.</li>
+<li>Touching the ball with two hands (except goalkeeper).</li>
+<li>Ordinary fouls result in a free throw from the spot.</li>
+<li>Exclusion Fouls (Major Fouls):</li>
+<li>Brutality, deliberate splashing, or preventing a goal with illegal contact.</li>
+<li>Player is excluded for 20 seconds (must leave the pool).</li>
+<li>Penalty Fouls:</li>
+<li>Major fouls in the 5-meter area that prevent a probable goal.</li>
+<li>Result in a penalty shot from the 5m line.</li>
+</ul>
+
+<h3>9. Goalkeeper Rules</h3>
+<ul>
+<li>Can touch the ball with both hands.</li>
+<li>Cannot cross the halfway line.</li>
+<li>Protects the goal and organizes defense.</li>
+</ul>
+
+<h3>10. Game Restart</h3>
+<ul>
+<li>After a goal: team without the goal restarts with the ball from center.</li>
+<li>After ordinary fouls: free throw to opponent.</li>
+<li>After exclusions: team plays 6 vs 7 until player returns.</li>
+</ul>
+
+<h3>11. Other Key Rules</h3>
+<ul>
+<li>Shot clock: 30 seconds per possession.</li>
+<li>Advantage rule: Referee may allow play to continue if stopping would benefit the fouling team.</li>
+<li>Overtime: 3-minute periods in knockout games.</li>
+<li>Tie-breaking: Penalty shootouts if still tied after overtime.</li>
+</ul>
+
+<h3>12. Equipment</h3>
+
+<div class="image-box">
+<img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="Ball">
+</div>
+
+<ul>
+<li>Ball: water polo ball is yellow, textured for grip.</li>
+<li>Caps: numbered for player identification.</li>
+<li>Swimsuits: tight-fitting for minimal interference.</li>
+</ul>
+
+<p>
+Water polo is fast-paced, physical, and tactical. Key strategies include:
+Center forward offense (“hole set”), Press defense, Counterattacks,
+and Man-up (power play) during exclusions.
+</p>
+
 </section>
 
-<!-- ========================= -->
-<!-- 12. EQUIPMENT -->
-<!-- ========================= -->
-<section class="card">
-  <h2>12. Equipment</h2>
+</div>
 
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Water_polo_ball.jpg" alt="Water Polo Ball">
-
-  <ul>
-    <li><strong>Ball:</strong> Yellow, textured for grip</li>
-    <li><strong>Caps:</strong> Numbered for players</li>
-    <li><strong>Swimsuits:</strong> Tight-fitting</li>
-  </ul>
-</section>
-
-<!-- ========================= -->
-<!-- FULL RULES CHEAT SHEET -->
-<!-- ========================= -->
-<section class="card">
-  <h2>📘 Quick Rules</h2>
-
-  <div class="grid">
-    <div>👥 <strong>Players:</strong> 7 per team</div>
-    <div>⏱ <strong>Time:</strong> 4 × 8 min</div>
-    <div>🎯 <strong>Goal:</strong> Ball crosses line</div>
-    <div>🤾 <strong>Hand:</strong> One hand only</div>
-    <div>⏳ <strong>Shot clock:</strong> 30 sec</div>
-    <div>🚫 <strong>Fouls:</strong> Holding, sinking</div>
-    <div>🟥 <strong>Exclusion:</strong> 20 sec out</div>
-    <div>🎯 <strong>Penalty:</strong> From 5m</div>
-  </div>
-  </section>
 </body>
-</html>
+  </html>
