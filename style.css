@@ -1,1 +1,65 @@
+/* ========================= */
+/* Water Polo Color Blurry Effect */
+/* ========================= */
 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0a1f44; /* fallback dark blue */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Animated water blobs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.7;
+  animation: float 10s infinite alternate;
+}
+
+.blob1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at 30% 30%, #00cfff, #004b7f);
+  top: -100px;
+  left: -100px;
+}
+
+.blob2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle at 70% 70%, #ffd500, #ff7f00);
+  top: 200px;
+  left: 150px;
+}
+
+.blob3 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle at 50% 50%, #00ffa3, #00664d);
+  top: 400px;
+  left: -50px;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0) translateX(0) rotate(0deg); }
+  50% { transform: translateY(-50px) translateX(50px) rotate(45deg); }
+  100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+}
+
+/* Optional: text on top */
+h1 {
+  position: relative;
+  z-index: 10;
+  color: white;
+  font-size: 4rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+}
